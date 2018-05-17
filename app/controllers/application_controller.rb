@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
 	end
 
 	post "/login" do
-		#your code here!
+		@user = User.new.find_by(:username => params[:username])
 	end
 
 	get "/success" do
